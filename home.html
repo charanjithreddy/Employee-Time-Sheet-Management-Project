@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="goto_timesheet_entry()">MODIFY TIMESHEET</button>
+
+    <button onclick="goto_create_employee_login()">CREATE EMPLOYEE LOGIN</button>
+
+    <button onclick="goto_password_reset()">RESET PAssword</button>
+
+    <button onclick="goto_logout()">LOGOUT</button>
+
+    
+    <script>
+
+        function goto_password_reset(){
+            window.location.href="password_reset.html";
+        }
+        function gotologout(){
+            window.location.href="logout.html";
+        }
+
+        function goto_create_employee_login(){
+            window.location.href="employee_login_creation.html"
+        }
+
+        function goto_timesheet_entry(){
+            window.location.href="timesheet_entry.html"
+        }
+    </script>
+    
+</body>
+</html>

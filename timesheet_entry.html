@@ -6,6 +6,36 @@
     <title>timesheet entry screen</title>
 </head>
 <body>
+    <p>Employee Name: ABC</p>
+
+    <label for="from_date">FROM DATE: </label>
+    <input type="date" name="" id="from_date">
+
+    <label for="to_date">TO DATE: </label>
+    <input type="date" name="" id="to_date">
+
+    <p>OUTPUT</p>
     
+    <h1>ADD WORK DETAILS</h1>
+    <label for="add_date">DATE: </label>
+    <input type="date" name="" id="add_date">
+
+    <label for="work_hours">No. of Work hours</label>
+    <input type="text" name="" id="work_hours">
+
+    <button type="submit()">UPDATE</button>
+    
+    <button onclick="goto_employee_login_creation()">CREATE EMPLOYEE LOGIN</button>
+    <button onclick="goto_logout()">LOGOUT</button>
+
+    <script>
+        function goto_logout(){
+            window.location.href="logout.html";
+        }
+
+        function goto_employee_login_creation(){
+            window.location.href="employee_login_creation.html"
+        }
+    </script>
 </body>
 </html>

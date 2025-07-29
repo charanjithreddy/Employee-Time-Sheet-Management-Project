@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee login creation </title>
+</head>
+<body>
+    <label for="admin_name">Admin Name: </label>
+    <input type="text" name="" id="admin_name">
+
+    <label for="emp_id">Id: </label>
+    <input type="number" name="" id="emp_id">
+
+    <label for="emp_name">Employee Name: </label>
+    <input type="text" name="" id="emp_name">
+    
+    <label for="mail">Mail-Id: </label>
+    <input type="email" name="" id="mail">
+    
+    <label for="dept">Department</label>
+    <input type="text" name="" id="dept">
+
+    <label for="time_entry">Time spent</label>
+    <input type="text" name="" id="time_entry">
+
+    <button type="submit">SAVE</button>
+
+    <button onclick="goto_timesheet_entry()">UPDATE TIMESHEET</button>
+
+    <button onclick="goto_logout()">LOGOUT</button>
+
+    <script>
+        function goto_logout(){
+            window.location.href="logout.html";
+        }
+        function goto_timesheet_entry(){
+            window.location.href="timesheet_entry.html";
+        }
+    </script>
+</body>
+</html>
