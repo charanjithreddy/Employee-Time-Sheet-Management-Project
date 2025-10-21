@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee login creation </title>
+    <link rel="stylesheet" href="../static/css/employee_login_creation_styles.css">
+</head>
+<body>
+    <!--
+    <label for="admin_name">Admin Name: </label>
+    <input type="text" name="admin_name" id="admin_name">-->
+
+    <form action="/home.html?from=employee_login_creation" method="POST">
+    <label for="emp_id">Id: </label>
+    <input type="number" name="emp_id" id="emp_id">
+
+    
+    <label for="emp_name">Employee Name: </label>
+    <input type="text" name="emp_name" id="emp_name">
+    
+    <label for="mail">Mail-Id: </label>
+    <input type="email" name="mail" id="mail">
+    
+    <label for="dept">Department</label>
+    <input type="text" name="dept" id="dept">
+
+    <label for="join_date">Joining date</label>
+    <input type="date" name="join_date" id="join_date">
+    
+    
+    <button type="submit">SAVE</button>
+    </form>
+
+    <form action="/timesheet_entry.html" method="POST">
+    <button onclick="goto_timesheet_entry()">UPDATE TIMESHEET</button>
+    </form>
+
+    <form action="/logout.html" method="POST">
+    <button onclick="goto_logout()">LOGOUT</button>
+    </form>
+
+    <script src="../static/js/employee_login_creation_script.js">
+    </script>
+</body>
+</html>

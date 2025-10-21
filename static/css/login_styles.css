@@ -1,0 +1,88 @@
+/* Full page layout */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    animation: backgroundShift 10s ease infinite alternate;
+}
+
+/* Animate the background for softness */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: #4a2c2a;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Label styling */
+label {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+    color: #4a2c2a;
+    display: block;
+}
+
+/* Input fields */
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border: 2px solid #ffd6a5;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #fcbf49;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #d62828;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #9d0208;
+    transform: scale(1.05);
+}
+
+.flash {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flash.error {
+  background-color: #ffcccc;
+  color: #b30000;
+  border: 1px solid #b30000;
+}

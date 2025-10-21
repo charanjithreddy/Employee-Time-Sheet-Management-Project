@@ -4,34 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/css/home_styles.css">
 </head>
 <body>
+    <form action="/timesheet_entry.html" method="POST">
     <button onclick="goto_timesheet_entry()">MODIFY TIMESHEET</button>
+    </form>
 
+    <form action="/employee_login_creation.html" method="POST">
     <button onclick="goto_create_employee_login()">CREATE EMPLOYEE LOGIN</button>
-
+    </form>
+    
+    <form action="/password_reset.html" methods="POST">
     <button onclick="goto_password_reset()">RESET PAssword</button>
+    </form>
 
+    <form action="/logout.html" methods="POST">
     <button onclick="goto_logout()">LOGOUT</button>
+    </form>
 
     
-    <script>
-
-        function goto_password_reset(){
-            window.location.href="password_reset.html";
-        }
-        function gotologout(){
-            window.location.href="logout.html";
-        }
-
-        function goto_create_employee_login(){
-            window.location.href="employee_login_creation.html"
-        }
-
-        function goto_timesheet_entry(){
-            window.location.href="timesheet_entry.html"
-        }
-    </script>
+    <script src="../static/js/home_script.js"></script>
     
 </body>
 </html>

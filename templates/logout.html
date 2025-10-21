@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/css/logout_styles.css">
 </head>
 <body>
     <h1>You've Successfully logged out</h1>
-    <button onclick="gotologin()">LOGIN AGAIN</button>
+    <form action="/login.html" method="POST">
+    <button type="button" onclick="gotologin()">LOGIN AGAIN</button>
+    </form>
 
-    <script>
-        function gotologin(){
-            window.location.href="login.html";
-        }
+    <script src="../static/js/logout_script.js">
     </script>
 </body>
 </html>

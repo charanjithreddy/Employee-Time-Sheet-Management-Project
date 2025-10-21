@@ -1,0 +1,66 @@
+/* General layout */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* soft purple-pink theme */
+    animation: backgroundShift 10s ease infinite alternate;
+}
+
+/* Background animation */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Input container */
+label {
+    display: block;
+    font-size: 1rem;
+    color: #4b145b;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #dcd6f7;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    border-color: #9d4edd;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    margin: 10px;
+    color: #fff;
+    background-color: #5a189a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3c096c;
+    transform: scale(1.05);
+}
