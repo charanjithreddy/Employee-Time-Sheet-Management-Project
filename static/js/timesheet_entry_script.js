@@ -5,6 +5,7 @@ function goto_logout(){
 function goto_employee_login_creation(){
     window.location.href="../templates/employee_login_creation.html"
 }
+/*
 function get_details() {
     const ename = document.getElementById("ename").value;
     const fromDate = new Date(document.getElementById("from_date").value);
@@ -110,3 +111,4 @@ function updateWorkDetails() {
 
     alert(`Updated ${ename}'s work hours for ${dateStr}.`);
 }
+*/

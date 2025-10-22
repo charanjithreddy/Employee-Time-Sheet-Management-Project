@@ -13,8 +13,37 @@ def login():
         return home_after_employee_login_creation()
     elif(from_page=="login"):
         return home_after_login()
+    elif(from_page=="timesheet_entry"):
+        return home_after_timesheet_entry()
     else:
         return render_template("login.html")
+    
+def home_after_timesheet_entry():
+    if(request.method=="POST"):
+        eid=request.form.get('eid')
+        add_date=request.form.get('add_date')
+        work_hours=request.form.get('work_hours')
+        connection=db_connect().get_connection();
+        cursor=connection.cursor();
+
+        query="SELECT EMPLOYEE_ID FROM EMPLOYEE WHERE EMPLOYEE_ID="+str(eid);
+        cursor.execute(query);
+        
+        if(cursor.rowcount==1):
+            query="INSERT INTO EMP_TIMESHEET(EMPLOYEE_ID,TS_DATE,WORKED_HOURS,IS_VACATION_Y_N,CREATED_USERID) VALUES(%s,%s,%s,%s,%s)"
+            values=(eid,add_date,work_hours,'N',session['user_id'])
+            cursor.execute(query,values)
+            connection.commit();
+            db_connect().close_connection(connection)
+            return render_template("home.html");
+            
+        else:
+            flash("Please recheck userid");
+            return render_template("timesheet_entry.html");
+
+    else:
+        print("wrong method for home after timesheet_entry");
+        return render_template("timesheet_entry.html");
 
 def home_after_login():
     if request.method == 'POST':
@@ -35,14 +64,8 @@ def home_after_login():
             return render_template("login.html");
         
     else:
-        print("wrong method");
+        print("wrong method for home after login");
         return render_template("login.html")
-
-
-
-
-
-
 
 def home_after_employee_login_creation():
     if request.method == 'POST':
