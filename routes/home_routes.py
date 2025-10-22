@@ -25,11 +25,15 @@ def home_after_timesheet_entry():
         work_hours=request.form.get('work_hours')
         connection=db_connect().get_connection();
         cursor=connection.cursor();
+        
 
         query="SELECT EMPLOYEE_ID FROM EMPLOYEE WHERE EMPLOYEE_ID="+str(eid);
         cursor.execute(query);
+        print(query);
+        print(cursor.rowcount);
+        result=cursor.fetchone();
         
-        if(cursor.rowcount==1):
+        if(result):
             query="INSERT INTO EMP_TIMESHEET(EMPLOYEE_ID,TS_DATE,WORKED_HOURS,IS_VACATION_Y_N,CREATED_USERID) VALUES(%s,%s,%s,%s,%s)"
             values=(eid,add_date,work_hours,'N',session['user_id'])
             cursor.execute(query,values)
