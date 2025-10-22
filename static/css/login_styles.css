@@ -1,88 +1,77 @@
-/* Full page layout */
+/* General page setup */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
     height: 100vh;
-    width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f6d365, #fda085);
-    animation: backgroundShift 10s ease infinite alternate;
+    justify-content: center;
 }
 
-/* Animate the background for softness */
-@keyframes backgroundShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+/* Card container */
+.container {
+    background: #ffffff;
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    width: 350px;
 }
 
-/* Header */
+/* Headings */
 h1 {
-    font-size: 2.5rem;
-    color: #4a2c2a;
+    color: #333;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
 }
 
-/* Label styling */
-label {
-    font-size: 1.1rem;
-    margin: 10px 0 5px;
-    color: #4a2c2a;
-    display: block;
-}
-
-/* Input fields */
-input {
-    padding: 10px;
-    font-size: 1rem;
-    width: 250px;
-    border: 2px solid #ffd6a5;
+/* Form inputs */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
     border-radius: 8px;
-    margin-bottom: 15px;
-    outline: none;
-    transition: border 0.3s ease;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-input:focus {
-    border-color: #fcbf49;
-}
-
-/* Button styling */
+/* Buttons */
 button {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #d62828;
+    padding: 14px 25px;
+    border-radius: 8px;
     border: none;
-    border-radius: 10px;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #9d0208;
-    transform: scale(1.05);
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
+/* Flash messages */
 .flash {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 .flash.error {
-  background-color: #ffcccc;
-  color: #b30000;
-  border: 1px solid #b30000;
+    background: #ffcccc;
+    color: #a00;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="../static/css/home_styles.css">
 </head>
 <body>
+    <div class="container">
     <form action="/timesheet_entry.html" method="POST">
-    <button onclick="goto_timesheet_entry()">MODIFY TIMESHEET</button>
+    <button class="tile" onclick="goto_timesheet_entry()">MODIFY TIMESHEET</button>
     </form>
 
     <form action="/employee_login_creation.html" method="POST">
-    <button onclick="goto_create_employee_login()">CREATE EMPLOYEE LOGIN</button>
+    <button class="tile" onclick="goto_create_employee_login()">CREATE EMPLOYEE LOGIN</button>
     </form>
     
     <form action="/password_reset.html" methods="POST">
-    <button onclick="goto_password_reset()">RESET PAssword</button>
+    <button class="tile" onclick="goto_password_reset()">RESET PAssword</button>
     </form>
 
     <form action="/logout.html" methods="POST">
-    <button onclick="goto_logout()">LOGOUT</button>
+    <button class="tile" onclick="goto_logout()">LOGOUT</button>
     </form>
-
+    </div>
     
     <script src="../static/js/home_script.js"></script>
     

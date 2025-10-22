@@ -1,51 +1,53 @@
-/* Body layout */
+/* General page setup */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdd6e3, #a8edea);
     height: 100vh;
-    width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffecd2, #fcb69f);
-    animation: backgroundShift 10s ease infinite alternate;
+    justify-content: center;
 }
 
-/* Background animation */
-@keyframes backgroundShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-/* Message styling */
-h1 {
-    font-size: 2rem;
-    color: #4b2e2e;
-    margin-bottom: 40px;
+/* Card container */
+.container {
+    background: #ffffff;
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+    width: 350px;
 }
 
-/* Button styling */
+/* Headings */
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Buttons */
 button {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #f3722c;
+    padding: 14px 25px;
+    border-radius: 8px;
     border: none;
-    border-radius: 10px;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #d9480f;
-    transform: scale(1.05);
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

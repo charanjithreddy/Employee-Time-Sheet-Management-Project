@@ -1,66 +1,92 @@
-/* General layout */
+/* General page setup */
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form card container */
+form {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 40px 50px;
+    width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* soft purple-pink theme */
-    animation: backgroundShift 10s ease infinite alternate;
+    gap: 15px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Background animation */
-@keyframes backgroundShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-/* Input container */
+/* Labels and inputs */
 label {
-    display: block;
-    font-size: 1rem;
-    color: #4b145b;
-    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
     font-weight: 500;
 }
 
 input {
-    padding: 10px;
-    width: 250px;
-    font-size: 1rem;
+    padding: 10px 12px;
     border-radius: 8px;
-    border: 2px solid #dcd6f7;
+    border: 1px solid #ccc;
+    font-size: 14px;
     outline: none;
-    transition: border-color 0.3s ease;
-    margin-bottom: 10px;
+    transition: all 0.3s ease;
 }
 
 input:focus {
-    border-color: #9d4edd;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
-/* Button styling */
+/* Buttons */
 button {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    margin: 10px;
-    color: #fff;
-    background-color: #5a189a;
+    padding: 12px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #3c096c;
-    transform: scale(1.05);
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Wrapper for the page content */
+.page-wrapper {
+    display: flex;
+    width: 75%;          /* takes 75% of page width */
+    height: 70%;         /* optional, adjust as needed */
+    gap: 30px;           /* space between left and right sections */
+    align-items: flex-start; /* aligns items at top */
+    justify-content: center;
+}
+
+/* Left section: first form */
+.left-section {
+    flex: 1;             /* takes half or proportional width */
+}
+
+/* Right section: two buttons stacked vertically */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;           /* space between two buttons */
+    justify-content: flex-start;
 }

@@ -11,6 +11,9 @@
     <label for="admin_name">Admin Name: </label>
     <input type="text" name="admin_name" id="admin_name">-->
 
+    <div class="page-wrapper">
+    <div class="left-section">
+
     <form action="/home.html?from=employee_login_creation" method="POST">
     <label for="emp_id">Id: </label>
     <input type="number" name="emp_id" id="emp_id">
@@ -31,7 +34,8 @@
     
     <button type="submit">SAVE</button>
     </form>
-
+    </div>
+    <div class="right-section">
     <form action="/timesheet_entry.html" method="POST">
     <button onclick="goto_timesheet_entry()">UPDATE TIMESHEET</button>
     </form>
@@ -39,6 +43,8 @@
     <form action="/logout.html" method="POST">
     <button onclick="goto_logout()">LOGOUT</button>
     </form>
+    </div>
+    </div>
 
     <script src="../static/js/employee_login_creation_script.js">
     </script>
