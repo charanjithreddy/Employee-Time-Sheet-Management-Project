@@ -28,8 +28,8 @@ app.secret_key='acr' #secret key for using flash
 # MySQL configuration
 db_config = {
     'host': 'localhost',
-    'user': 'root',         # replace with your MySQL username
-    'password': 'Babulal007$', # replace with your MySQL password
+    'user': 'your_username_here',         # replace with your MySQL username
+    'password': 'your_password_here', # replace with your MySQL password
     'database': 'flask_app'
 }
 
