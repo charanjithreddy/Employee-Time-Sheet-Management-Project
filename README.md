@@ -52,7 +52,6 @@ Ensure the following are installed:
 - pip (Python package manager)
 
 ### 2️⃣ Clone the Repository
-```bash
 git clone <repository-url>
 cd ACR_PROJECT
 
