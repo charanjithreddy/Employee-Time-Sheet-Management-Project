@@ -56,17 +56,16 @@ Ensure the following are installed:
 git clone <repository-url>
 cd ACR_PROJECT
 
-3️⃣ Install Dependencies
-
+### 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-4️⃣ Configure the Database
+### 4️⃣ Configure the Database
 
 Update the database connection details in routes/db_connect.py.
 
 Import the provided SQL schema (EMPLOYEE and EMP_TIMESHEET tables).
 
-5️⃣ Run the Application
+### 5️⃣ Run the Application
 
 python app.py
 
@@ -74,7 +73,7 @@ python app.py
 The application will be available at:
 👉 http://127.0.0.1:5000
 
-Author
+### Author
 
 A Charanjith Reddy
 B.Tech Computer Science and Engineering
